@@ -13,6 +13,7 @@ imgH = 1440
 imgW = 2560
 
 colors = []
+print("Checpoint 0: --- %s seconds ---" % (time.time() - start_time))
 
 for h in range(imgH):
     scaledH = math.floor(255 * h/imgH)
@@ -29,5 +30,8 @@ print("Checpoint 1: --- %s seconds ---" % (time.time() - start_time))
 colors = bytes(colors)
 print("Checpoint 2: --- %s seconds ---" % (time.time() - start_time))
 img = Image.frombytes('RGB', (imgW, imgH), colors)
+print("Checpoint 3: --- %s seconds ---" % (time.time() - start_time))
 img.show()
+print("Checpoint 4: --- %s seconds ---" % (time.time() - start_time))
 img.save('out/current.png')
+print("Checpoint 5: --- %s seconds ---" % (time.time() - start_time))
